@@ -182,6 +182,28 @@ body {
     transform: translateY(-2px);
 }
 
+.btn-portal {
+    background: var(--accent);
+    color: var(--dark-bg);
+    padding: 0.6rem 1.5rem;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-portal:hover {
+    background: var(--white);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(0, 217, 255, 0.3);
+}
+
+.btn-large {
+    padding: 1.2rem 3rem;
+    font-size: 1.05rem;
+}
+
 /* Methodology Section */
 .methodology-section {
     padding: 6rem 0;
@@ -473,6 +495,72 @@ body {
     border-bottom: none;
 }
 
+/* Portal Section */
+.portal-section {
+    padding: 6rem 0;
+    background: linear-gradient(135deg, var(--dark-bg) 0%, var(--dark-section) 100%);
+    border-top: 1px solid rgba(26, 155, 142, 0.1);
+    border-bottom: 1px solid rgba(26, 155, 142, 0.1);
+}
+
+.portal-content {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.portal-content h2 {
+    font-size: 2.5rem;
+    color: var(--white);
+    margin-bottom: 1.5rem;
+}
+
+.portal-content > p {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin-bottom: 3rem;
+    line-height: 1.8;
+}
+
+.portal-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.portal-feature {
+    background: var(--dark-section);
+    padding: 2rem;
+    border-radius: 10px;
+    border: 1px solid rgba(26, 155, 142, 0.1);
+    transition: all 0.3s ease;
+}
+
+.portal-feature:hover {
+    border-color: var(--primary-color);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(26, 155, 142, 0.15);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.portal-feature h4 {
+    color: var(--white);
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+}
+
+.portal-feature p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
 /* Contact Section */
 .contact-section {
     padding: 6rem 0;
@@ -621,6 +709,10 @@ body {
     .options-grid {
         grid-template-columns: 1fr;
     }
+
+    .portal-features {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 480px) {
@@ -644,6 +736,7 @@ body {
     .expertise-section h2,
     .options-section h2,
     .plans-section h2,
+    .portal-content h2,
     .contact-section h2 {
         font-size: 1.8rem;
         margin-bottom: 2rem;
