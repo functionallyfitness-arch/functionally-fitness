@@ -125,13 +125,17 @@
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            background: linear-gradient(135deg, rgba(27, 67, 50, 0.75) 0%, rgba(42, 157, 143, 0.75) 100%), url('images/download.jpg') center/cover no-repeat;
             color: var(--text-light);
-            padding: 7rem 0;
+            padding: 10rem 0;
             text-align: center;
             border-bottom: 5px solid var(--accent-color);
             position: relative;
             overflow: hidden;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .hero::before {
@@ -157,19 +161,21 @@
         }
 
         .hero-content h1 {
-            font-size: 3rem;
+            font-size: 3.5rem;
             margin-bottom: 1.5rem;
             line-height: 1.3;
             color: var(--text-light);
-            letter-spacing: 1px;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
 
         .hero-content p {
-            font-size: 1.25rem;
-            margin-bottom: 2rem;
+            font-size: 1.35rem;
+            margin-bottom: 2.5rem;
             color: #f0ebe3;
             font-weight: 400;
             letter-spacing: 0.3px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
         }
 
         /* Buttons */
@@ -394,11 +400,19 @@
             align-items: center;
         }
 
+        .coach-image {
+            position: relative;
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
         .coach-image img {
             width: 100%;
-            border-radius: 2px;
+            height: 100%;
+            object-fit: cover;
             box-shadow: 0 20px 50px rgba(27, 67, 50, 0.2);
             border: 3px solid var(--accent-color);
+            display: block;
         }
 
         .coach-info h2 {
@@ -475,6 +489,8 @@
             box-shadow: 0 8px 25px rgba(27, 67, 50, 0.12);
             transition: all 0.3s ease;
             border-left: 4px solid var(--secondary-color);
+            display: flex;
+            flex-direction: column;
         }
 
         .option-card:hover {
@@ -485,8 +501,9 @@
 
         .option-card img {
             width: 100%;
-            height: 250px;
+            height: 280px;
             object-fit: cover;
+            display: block;
         }
 
         .option-card h3 {
@@ -502,6 +519,7 @@
             line-height: 1.8;
             font-size: 1rem;
             background: var(--cream-bg);
+            flex-grow: 1;
         }
 
         /* Plans Section */
@@ -799,13 +817,22 @@
                 font-size: 0.9rem;
             }
 
+            .hero {
+                padding: 5rem 0;
+                min-height: auto;
+            }
+
             .hero .container {
                 grid-template-columns: 1fr;
                 text-align: center;
             }
 
             .hero-content h1 {
-                font-size: 2rem;
+                font-size: 2.2rem;
+            }
+
+            .hero-content p {
+                font-size: 1.1rem;
             }
 
             .coach-content {
@@ -886,41 +913,41 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero Section with Background Image -->
     <section class="hero">
         <div class="container">
             <div class="hero-content">
                 <h1>Science-Based Personal Training</h1>
                 <p>Evidence-driven programming tailored to your physiology and goals</p>
-                <a href="https://calendar.app.google/uceB14mhh3rDk57X7" class="btn btn-primary">Book Free Consultation</a>
+                <a href="https://calendar.app.google/uceB14mhh3rDk57X7" class="btn btn-primary btn-large">Book Free Consultation</a>
             </div>
         </div>
     </section>
 
     <!-- Methodology Section -->
-    <section id="why" class="methodology-section">
+    <section class="methodology-section" id="why">
         <div class="container">
             <h2>Our Science-Based Approach</h2>
             <div class="methodology-grid">
                 <div class="method-card">
                     <div class="method-number">01</div>
                     <h3>Assessment</h3>
-                    <p>Comprehensive fitness and movement assessment to understand your baseline physiology and limitations.</p>
+                    <p>We conduct detailed movement analysis and functional testing to understand your body's unique mechanics and needs.</p>
                 </div>
                 <div class="method-card">
                     <div class="method-number">02</div>
                     <h3>Programming</h3>
-                    <p>Evidence-based program design using exercise science principles for maximum results and safety.</p>
+                    <p>Evidence-based programming designed specifically for your goals, capabilities, and movement patterns.</p>
                 </div>
                 <div class="method-card">
                     <div class="method-number">03</div>
                     <h3>Execution</h3>
-                    <p>Expert coaching with real-time feedback on form, intensity, and movement quality.</p>
+                    <p>Expert coaching with real-time feedback ensures proper form and maximum results from every rep.</p>
                 </div>
                 <div class="method-card">
                     <div class="method-number">04</div>
-                    <h3>Adaptation</h3>
-                    <p>Continuous program adjustments based on data, progress tracking, and performance metrics.</p>
+                    <h3>Progression</h3>
+                    <p>Continuous monitoring and program adjustments keep your training challenging and results consistent.</p>
                 </div>
             </div>
         </div>
@@ -932,134 +959,141 @@
             <h2>Professional Credentials</h2>
             <div class="credentials-grid">
                 <div class="credential">
+                    <h4>NASM-PES</h4>
+                    <p>Performance Enhancement Specialist</p>
+                </div>
+                <div class="credential">
                     <h4>NASM-CPT</h4>
                     <p>Certified Personal Trainer</p>
                 </div>
                 <div class="credential">
-                    <h4>EPC</h4>
-                    <p>Exercise Physiologist</p>
-                </div>
-                <div class="credential">
-                    <h4>CES</h4>
+                    <h4>ISSA-CES</h4>
                     <p>Corrective Exercise Specialist</p>
                 </div>
                 <div class="credential">
-                    <h4>CNS</h4>
-                    <p>Certified Nutrition Specialist</p>
+                    <h4>PhysioCore</h4>
+                    <p>Advanced Movement Training</p>
                 </div>
                 <div class="credential">
-                    <h4>TRX</h4>
-                    <p>Suspension Training Certified</p>
+                    <h4>Precision Nutrition</h4>
+                    <p>Nutrition Coaching Certified</p>
                 </div>
                 <div class="credential">
-                    <h4>B.S. Exercise Science</h4>
-                    <p>Austin Peay State University</p>
+                    <h4>FMS Level 2</h4>
+                    <p>Functional Movement Screen</p>
                 </div>
                 <div class="credential">
-                    <h4>Special Population Training</h4>
-                    <p>Specialized Fitness Certification</p>
+                    <h4>Exercise Science</h4>
+                    <p>Degree-Based Training</p>
                 </div>
                 <div class="credential">
-                    <h4>Sports & Conditioning</h4>
-                    <p>Athletic Performance Training</p>
+                    <h4>Continued Learning</h4>
+                    <p>Ongoing Professional Development</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Meet Tyler Smith Section -->
-    <section id="coach" class="coach-section">
+    <!-- Coach Section -->
+    <section class="coach-section" id="coach">
         <div class="container">
             <div class="coach-content">
                 <div class="coach-image">
-                    <img src="images/meettylersmith.jpg" alt="Tyler Smith - Personal Trainer">
+                    <img src="images/tyler-smith-coach.jpg" alt="Tyler Smith - Founder & Lead Coach">
                 </div>
                 <div class="coach-info">
                     <h2>Meet Tyler Smith</h2>
-                    <p>With over a decade of experience in personal training and fitness coaching, Tyler is dedicated to helping you achieve your fitness goals. His evidence-based approach combines strength training, conditioning, and mobility work to ensure sustainable results.</p>
-                    <p>Tyler specializes in:</p>
+                    <p>Founded Functionally Fitness with a mission to deliver evidence-based training that transforms lives through movement mastery and consistent progression.</p>
+                    <p>With years of experience in performance coaching and a commitment to continuing education, Tyler specializes in helping athletes and fitness enthusiasts achieve their highest potential through personalized programming.</p>
                     <ul>
-                        <li>Strength & Conditioning</li>
-                        <li>Functional Fitness</li>
+                        <li>Specialized Movement Assessment & Correction</li>
+                        <li>Athletic Performance Development</li>
                         <li>Injury Prevention & Rehabilitation</li>
-                        <li>Performance Enhancement</li>
+                        <li>Strength & Power Development</li>
+                        <li>Nutrition Coaching & Behavior Change</li>
+                        <li>Goal-Specific Program Design</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Training Options -->
-    <section id="options" class="options-section">
+    <!-- Training Options Section -->
+    <section class="options-section" id="options">
         <div class="container">
-            <h2>One-On-One Training Options</h2>
+            <h2>Training Services</h2>
             <div class="options-grid">
                 <div class="option-card">
-                    <img src="images/in-personsessions.jpg" alt="In-Person Training">
+                    <img src="images/in-person-training.jpg" alt="In-Person Training Sessions">
                     <h3>In-Person Sessions</h3>
-                    <p>Train face-to-face with direct supervision and real-time form correction at our fully equipped facility.</p>
+                    <p>One-on-one coaching in our facility. Get immediate feedback, correction, and hands-on guidance for maximum results and safety.</p>
+                    <a href="https://form.jotform.com/262446754363059" class="btn btn-primary" style="margin: 1.5rem 1.5rem 0;">Get Started</a>
                 </div>
                 <div class="option-card">
-                    <img src="images/onlinecoaching.jpg" alt="Online Coaching">
+                    <img src="images/online-coaching.jpg" alt="Online Coaching">
                     <h3>Online Coaching</h3>
-                    <p>Get personalized training from anywhere. Complete flexibility with live coaching sessions via video call.</p>
+                    <p>Train remotely with personalized programming and form check-ins. Perfect for those with flexible schedules or who prefer home training.</p>
+                    <a href="https://form.jotform.com/262446601203043" class="btn btn-primary" style="margin: 1.5rem 1.5rem 0;">Get Started</a>
                 </div>
                 <div class="option-card">
-                    <img src="images/hybridtraining.jpg" alt="Hybrid Training">
+                    <img src="images/hybrid-training.jpg" alt="Hybrid Training Programs">
                     <h3>Hybrid Training</h3>
-                    <p>Mix in-person and online sessions to combine the best of both worlds for maximum convenience.</p>
+                    <p>Combine in-person and online sessions for flexibility. Strategic mix ensures consistent progress with lifestyle balance.</p>
+                    <a href="https://form.jotform.com/262447336815058" class="btn btn-primary" style="margin: 1.5rem 1.5rem 0;">Get Started</a>
                 </div>
                 <div class="option-card">
-                    <img src="images/specializedprograms.jpg" alt="Specialized Programs">
+                    <img src="images/specialized-programs.jpg" alt="Specialized Programs">
                     <h3>Specialized Programs</h3>
-                    <p>Sport-specific training, weight loss programs, and specialized fitness goals tailored to you.</p>
+                    <p>Sport-specific training, post-injury rehabilitation, and performance optimization for advanced athletes and fitness enthusiasts.</p>
+                    <a href="https://calendar.app.google/uceB14mhh3rDk57X7" class="btn btn-primary" style="margin: 1.5rem 1.5rem 0;">Consult</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Membership Plans -->
-    <section id="plans" class="plans-section">
+    <!-- Membership Plans Section -->
+    <section class="plans-section" id="plans">
         <div class="container">
-            <h2>Membership Plans</h2>
+            <h2>Choose Your Plan</h2>
             <div class="plans-grid">
                 <div class="plan-card">
                     <h3>Starter</h3>
-                    <div class="price">$99<span>/mo</span></div>
+                    <div class="price">$99<span>/month</span></div>
                     <ul class="plan-features">
-                        <li>✓ 2 sessions per month</li>
-                        <li>✓ Initial fitness assessment</li>
-                        <li>✓ Basic workout plan</li>
-                        <li>✓ Email support</li>
+                        <li>2 Sessions per Month</li>
+                        <li>Program Design</li>
+                        <li>Form Corrections</li>
+                        <li>Progress Tracking</li>
+                        <li>Email Support</li>
                     </ul>
-                    <a href="https://form.jotform.com/262446754363059" class="btn btn-secondary">Get Started</a>
-                </div>
-                <div class="plan-card">
-                    <h3>Pro</h3>
-                    <div class="price">$249<span>/mo</span></div>
-                    <ul class="plan-features">
-                        <li>✓ 4 sessions per month</li>
-                        <li>✓ Detailed fitness assessment</li>
-                        <li>✓ Custom workout plan</li>
-                        <li>✓ Nutrition guidance</li>
-                        <li>✓ Progress tracking</li>
-                        <li>✓ Priority support</li>
-                    </ul>
-                    <a href="https://form.jotform.com/262446601203043" class="btn btn-secondary">Get Started</a>
+                    <a href="https://form.jotform.com/262446754363059" class="btn btn-primary btn-large">Start Now</a>
                 </div>
                 <div class="plan-card featured">
-                    <div class="featured-badge">Premium Tier</div>
-                    <h3>Elite</h3>
-                    <div class="price">$499<span>/mo</span></div>
+                    <div class="featured-badge">MOST POPULAR</div>
+                    <h3>Pro</h3>
+                    <div class="price">$249<span>/month</span></div>
                     <ul class="plan-features">
-                        <li>✓ Unlimited sessions</li>
-                        <li>✓ Comprehensive assessment</li>
-                        <li>✓ Advanced programming</li>
-                        <li>✓ Full nutrition planning</li>
-                        <li>✓ 24/7 support</li>
-                        <li>✓ Quarterly body composition scans</li>
+                        <li>Unlimited Sessions</li>
+                        <li>Personalized Programming</li>
+                        <li>Nutrition Guidance</li>
+                        <li>Monthly Assessments</li>
+                        <li>Priority Support</li>
+                        <li>Online Access 24/7</li>
                     </ul>
-                    <a href="https://form.jotform.com/262447336815058" class="btn btn-primary">Get Started</a>
+                    <a href="https://form.jotform.com/262446601203043" class="btn btn-primary btn-large">Start Now</a>
+                </div>
+                <div class="plan-card">
+                    <h3>Elite</h3>
+                    <div class="price">$499<span>/month</span></div>
+                    <ul class="plan-features">
+                        <li>Unlimited Sessions</li>
+                        <li>Sport-Specific Training</li>
+                        <li>Advanced Nutrition</li>
+                        <li>Bi-weekly Assessments</li>
+                        <li>Direct Phone Access</li>
+                        <li>Recovery Protocols</li>
+                    </ul>
+                    <a href="https://form.jotform.com/262447336815058" class="btn btn-primary btn-large">Start Now</a>
                 </div>
             </div>
         </div>
@@ -1069,53 +1103,53 @@
     <section class="portal-section">
         <div class="container">
             <div class="portal-content">
-                <h2>Your Personalized Training Portal</h2>
-                <p>Track your progress, access your custom training programs, manage your nutrition plans, and log your workouts all in one place. Our client portal gives you 24/7 access to your personalized fitness journey.</p>
+                <h2>Functionally Fitness Client Portal</h2>
+                <p>Access your complete training ecosystem anytime, anywhere. Track progress, manage workouts, and connect with your coach.</p>
                 <div class="portal-features">
                     <div class="portal-feature">
-                        <span class="feature-icon">📋</span>
-                        <h4>Custom Programs</h4>
-                        <p>View your personalized training programs with detailed instructions and video demos</p>
-                    </div>
-                    <div class="portal-feature">
-                        <span class="feature-icon">🍽️</span>
-                        <h4>Nutrition Plans</h4>
-                        <p>Access your meal plans, macro targets, and food options tailored to your goals</p>
+                        <span class="feature-icon">📊</span>
+                        <h4>Progress Tracking</h4>
+                        <p>Detailed analytics and metrics to visualize your progress and celebrate victories.</p>
                     </div>
                     <div class="portal-feature">
                         <span class="feature-icon">💪</span>
-                        <h4>Progress Tracking</h4>
-                        <p>Log workouts, track PRs, and monitor your progress in real-time</p>
+                        <h4>Workout Access</h4>
+                        <p>View, log, and complete personalized workout programs from any device.</p>
                     </div>
                     <div class="portal-feature">
-                        <span class="feature-icon">📊</span>
-                        <h4>Performance Metrics</h4>
-                        <p>View your performance data and see how you're progressing toward your goals</p>
+                        <span class="feature-icon">🗓️</span>
+                        <h4>Session Booking</h4>
+                        <p>Schedule sessions, manage appointments, and stay aligned with your training plan.</p>
+                    </div>
+                    <div class="portal-feature">
+                        <span class="feature-icon">💬</span>
+                        <h4>Direct Messaging</h4>
+                        <p>Quick communication channel for questions, form checks, and program adjustments.</p>
                     </div>
                 </div>
-                <a href="ffclientportal.floot.app" class="btn btn-primary btn-large">Access Client Portal</a>
+                <a href="https://portal.functionallyfitness.com" class="btn btn-portal btn-large">Access Portal</a>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact-section">
+    <section class="contact-section">
         <div class="container">
-            <h2>Ready to Transform Your Fitness?</h2>
-            <p>Get started with a free consultation today</p>
-            <a href="https://calendar.app.google/uceB14mhh3rDk57X7" class="btn btn-primary btn-large" style="margin-bottom: 3rem; display: inline-block;">Book Your Free Consultation</a>
+            <h2>Get Started Today</h2>
+            <p>Ready to transform your fitness? Let's create your personalized training plan.</p>
+            <a href="https://calendar.app.google/uceB14mhh3rDk57X7" class="btn btn-primary btn-large">Book Free Consultation</a>
             <div class="contact-methods">
                 <div class="contact-card">
-                    <h4>Email</h4>
-                    <p><a href="mailto:functionallyfitness@gmail.com">functionallyfitness@gmail.com</a></p>
-                </div>
-                <div class="contact-card">
                     <h4>Phone</h4>
-                    <p><a href="tel:+1-719-963-2122">(719) 963-2122</a></p>
+                    <p><a href="tel:7199632122">(719) 963-2122</a></p>
                 </div>
                 <div class="contact-card">
                     <h4>Location</h4>
                     <p>Clarksville, TN & Fort Campbell Areas</p>
+                </div>
+                <div class="contact-card">
+                    <h4>Email</h4>
+                    <p><a href="mailto:contact@functionallyfitness.com">contact@functionallyfitness.com</a></p>
                 </div>
             </div>
         </div>
