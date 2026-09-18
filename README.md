@@ -128,7 +128,7 @@ functionally-fitness/
 
 ### Booking & Forms
 - **Free Consultation Calendar**: https://calendar.app.google/uceB14mhh3rDk57X7
-- **Client Portal**: https://portal.functionallyfitness.com
+- **Client Portal**: https://ffclientportal.floot.app
 
 ### Tier Intake Forms (Jotform)
 - **Tier 1 Intake**: https://form.jotform.com/262446754363059
@@ -188,7 +188,7 @@ Modify CSS variables at the top of `<style>`:
 Search for these URLs in `index.html` and replace:
 - Google Calendar: `https://calendar.app.google/uceB14mhh3rDk57X7`
 - Jotform links: Replace all three form URLs
-- Client Portal: `https://portal.functionallyfitness.com`
+- Client Portal: `https://ffclientportal.floot.app`
 
 ### Adding New Sections
 1. Add HTML markup in `<body>`
