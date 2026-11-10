@@ -652,6 +652,66 @@
             border-bottom: none;
         }
 
+        .plan-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .plan-actions .btn {
+            width: 100%;
+            text-align: center;
+        }
+
+        .plan-terms {
+            margin-top: 1rem;
+            font-size: 0.85rem;
+            line-height: 1.5;
+            color: #666;
+            text-align: center;
+        }
+
+        .addon-card {
+            margin-top: 2.5rem;
+            background: white;
+            padding: 2rem 2.5rem;
+            border-radius: 2px;
+            box-shadow: 0 8px 25px rgba(27, 67, 50, 0.12);
+            border-left: 4px solid var(--accent-color);
+            display: grid;
+            grid-template-columns: 1fr minmax(220px, 280px);
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .addon-card h3 {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .addon-price {
+            color: var(--accent-color);
+            font-family: 'Cinzel', serif;
+            margin-left: 0.5rem;
+        }
+
+        .addon-price span {
+            font-size: 0.6em;
+            color: #555;
+        }
+
+        .addon-card .plan-terms {
+            text-align: left;
+        }
+
+        @media (max-width: 768px) {
+            .addon-card {
+                grid-template-columns: 1fr;
+                padding: 1.75rem 1.5rem;
+            }
+        }
+
         /* Portal Section */
         .portal-section {
             padding: 6rem 0;
@@ -1054,20 +1114,20 @@
                     <p class="option-tier">Tier 1</p>
                     <h3>Online Coaching</h3>
                     <p>Train remotely with personalized programming and form check-ins. Perfect for those with flexible schedules or who prefer home training.</p>
-                    <a href="https://form.jotform.com/262446754363059" class="btn btn-primary" style="margin: 1.5rem 1.5rem 0;">Get Started</a>
+                    <a href="#plans" class="btn btn-primary" style="margin: 1.5rem 1.5rem 0;">See Plans</a>
                 </div>
                 <div class="option-card">
                     <img src="images/in-person-training.jpg" alt="In-Person Training Sessions">
                     <p class="option-tier">Tier 2 &amp; up</p>
                     <h3>In-Person Sessions</h3>
                     <p>One-on-one coaching in our facility. Get immediate feedback, correction, and hands-on guidance for maximum results and safety.</p>
-                    <a href="https://form.jotform.com/262446601203043" class="btn btn-primary" style="margin: 1.5rem 1.5rem 0;">Get Started</a>
+                    <a href="#plans" class="btn btn-primary" style="margin: 1.5rem 1.5rem 0;">See Plans</a>
                 </div>
                 <div class="option-card">
                     <img src="images/hybrid-training.jpg" alt="Hybrid Training Programs">
                     <h3>Hybrid Training</h3>
                     <p>Combine in-person and online sessions for flexibility. Strategic mix ensures consistent progress with lifestyle balance.</p>
-                    <a href="https://form.jotform.com/262447336815058" class="btn btn-primary" style="margin: 1.5rem 1.5rem 0;">Get Started</a>
+                    <a href="#plans" class="btn btn-primary" style="margin: 1.5rem 1.5rem 0;">See Plans</a>
                 </div>
                 <div class="option-card">
                     <img src="images/specialized-programs.jpg" alt="Specialized Programs">
@@ -1095,7 +1155,11 @@
                         <li>Progress Tracking</li>
                         <li>Email Support</li>
                     </ul>
-                    <a href="https://form.jotform.com/262446754363059" class="btn btn-primary btn-large">Start Now</a>
+                    <div class="plan-actions">
+                        <a href="https://square.link/u/ylHL6In1" class="btn btn-primary btn-large" target="_blank" rel="noopener">Subscribe $99/mo</a>
+                        <a href="https://calendar.app.google/uceB14mhh3rDk57X7" class="btn btn-secondary" target="_blank" rel="noopener">Questions First?</a>
+                    </div>
+                    <p class="plan-terms">Select <strong>Subscription</strong> at checkout. Billed monthly. Cancel anytime with 30 days&rsquo; written notice. A short health intake opens right after checkout.</p>
                 </div>
                 <div class="plan-card featured">
                     <div class="featured-badge">MOST POPULAR</div>
@@ -1110,7 +1174,11 @@
                         <li>Priority Support</li>
                         <li>Online Access 24/7</li>
                     </ul>
-                    <a href="https://form.jotform.com/262446601203043" class="btn btn-primary btn-large">Start Now</a>
+                    <div class="plan-actions">
+                        <a href="https://square.link/u/W8YvNyF7" class="btn btn-primary btn-large" target="_blank" rel="noopener">Subscribe $249/mo</a>
+                        <a href="https://calendar.app.google/uceB14mhh3rDk57X7" class="btn btn-secondary" target="_blank" rel="noopener">Questions First?</a>
+                    </div>
+                    <p class="plan-terms">Select <strong>Subscription</strong> at checkout. Billed monthly. Cancel anytime with 30 days&rsquo; written notice. A short health intake opens right after checkout.</p>
                 </div>
                 <div class="plan-card">
                     <p class="plan-tier">Tier 3 &middot; In-Person</p>
@@ -1124,7 +1192,23 @@
                         <li>Direct Phone Access</li>
                         <li>Recovery Protocols</li>
                     </ul>
-                    <a href="https://form.jotform.com/262447336815058" class="btn btn-primary btn-large">Start Now</a>
+                    <div class="plan-actions">
+                        <a href="https://square.link/u/NByd55h8" class="btn btn-primary btn-large" target="_blank" rel="noopener">Subscribe $499/mo</a>
+                        <a href="https://calendar.app.google/uceB14mhh3rDk57X7" class="btn btn-secondary" target="_blank" rel="noopener">Questions First?</a>
+                    </div>
+                    <p class="plan-terms">Select <strong>Subscription</strong> at checkout. Billed monthly. Cancel anytime with 30 days&rsquo; written notice. A short health intake opens right after checkout.</p>
+                </div>
+            </div>
+            <div class="addon-card">
+                <div class="addon-text">
+                    <p class="plan-tier">Add-On</p>
+                    <h3>Nutrition Guidance <span class="addon-price">$75<span>/month</span></span></h3>
+                    <p>An individualized nutrition guide and check-ins. Add it to any plan, or take it on its own.</p>
+                    <p class="plan-terms">Select <strong>Subscription</strong> at checkout. Billed monthly. Cancel anytime with 30 days&rsquo; written notice. A short health intake opens right after checkout.</p>
+                </div>
+                <div class="plan-actions">
+                    <a href="https://square.link/u/I1H0J2es" class="btn btn-primary btn-large" target="_blank" rel="noopener">Subscribe $75/mo</a>
+                    <a href="https://calendar.app.google/uceB14mhh3rDk57X7" class="btn btn-secondary" target="_blank" rel="noopener">Questions First?</a>
                 </div>
             </div>
         </div>
