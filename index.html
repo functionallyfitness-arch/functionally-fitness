@@ -1038,6 +1038,113 @@
                 grid-template-columns: 1fr;
             }
         }
+        /* Mobile pass: menu button, tap targets, call bar */
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: 1px solid var(--accent-color);
+            border-radius: 2px;
+            color: var(--accent-color);
+            font-size: 1.4rem;
+            line-height: 1;
+            padding: 0.45rem 0.8rem;
+            cursor: pointer;
+        }
+
+        .mobile-cta-bar {
+            display: none;
+        }
+
+        .btn {
+            min-height: 48px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        a.btn {
+            display: inline-flex;
+        }
+
+        @media (max-width: 768px) {
+            .header .container {
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 0.5rem;
+            }
+
+            .nav-toggle {
+                display: block;
+                margin-left: auto;
+            }
+
+            .nav {
+                display: none;
+                width: 100%;
+            }
+
+            .nav.open {
+                display: block;
+            }
+
+            .nav ul {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0;
+                font-size: 1rem;
+            }
+
+            .nav ul li a {
+                display: block;
+                padding: 0.7rem 0.25rem;
+            }
+
+            .methodology-section,
+            .expertise-section,
+            .coach-section,
+            .options-section,
+            .plans-section,
+            .portal-section,
+            .contact-section,
+            .leadmagnet-section {
+                padding: 3.5rem 0;
+            }
+
+            .mobile-cta-bar {
+                display: flex;
+                position: fixed;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                z-index: 200;
+                background: var(--primary-color);
+                border-top: 3px solid var(--accent-color);
+            }
+
+            .mobile-cta-bar a {
+                flex: 1;
+                text-align: center;
+                padding: 0.95rem 0.5rem;
+                font-family: 'Cinzel', serif;
+                font-weight: 700;
+                font-size: 0.95rem;
+                letter-spacing: 1px;
+                text-decoration: none;
+            }
+
+            .mobile-cta-call {
+                color: var(--text-light);
+            }
+
+            .mobile-cta-book {
+                background: var(--accent-color);
+                color: var(--primary-color);
+            }
+
+            body {
+                padding-bottom: 57px;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -1048,7 +1155,8 @@
                 <img src="images/logo.png" alt="Functionally Fitness Logo" class="logo">
                 <span class="business-name">Functionally Fitness</span>
             </div>
-            <nav class="nav">
+            <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+            <nav class="nav" id="mainNav">
                 <ul>
                     <li><a href="#why">Why Us</a></li>
                     <li><a href="#coach">Meet Tyler</a></li>
@@ -1355,5 +1463,30 @@
             </div>
         </div>
     </footer>
+
+    <!-- Mobile call bar: phones only -->
+    <div class="mobile-cta-bar">
+        <a href="tel:7199632122" class="mobile-cta-call">Call</a>
+        <a href="https://calendar.app.google/uceB14mhh3rDk57X7" class="mobile-cta-book">Book Free Consultation</a>
+    </div>
+
+    <script>
+        (function () {
+            var toggle = document.getElementById('navToggle');
+            var nav = document.getElementById('mainNav');
+            if (!toggle || !nav) return;
+            toggle.addEventListener('click', function () {
+                var open = nav.classList.toggle('open');
+                toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+                toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+            });
+            nav.addEventListener('click', function (e) {
+                if (e.target.tagName === 'A') {
+                    nav.classList.remove('open');
+                    toggle.setAttribute('aria-expanded', 'false');
+                }
+            });
+        })();
+    </script>
 </body>
 </html>
