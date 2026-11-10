@@ -591,6 +591,31 @@
             letter-spacing: 1px;
         }
 
+        .plan-tier,
+        .option-tier {
+            font-family: 'Cinzel', serif;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--secondary-color);
+            margin-bottom: 0.4rem;
+        }
+
+        .option-card .option-tier {
+            margin: 0;
+            padding: 1.5rem 1.5rem 0;
+            background: none;
+            color: var(--secondary-color);
+            font-size: 0.8rem;
+            line-height: 1.4;
+            flex-grow: 0;
+        }
+
+        .option-card .option-tier + h3 {
+            padding-top: 0.3rem;
+        }
+
         .plan-card h3 {
             color: var(--primary-color);
             font-size: 1.8rem;
@@ -1025,15 +1050,17 @@
             <h2>Training Services</h2>
             <div class="options-grid">
                 <div class="option-card">
-                    <img src="images/in-person-training.jpg" alt="In-Person Training Sessions">
-                    <h3>In-Person Sessions</h3>
-                    <p>One-on-one coaching in our facility. Get immediate feedback, correction, and hands-on guidance for maximum results and safety.</p>
+                    <img src="images/online-coaching.jpg" alt="Online Coaching">
+                    <p class="option-tier">Tier 1</p>
+                    <h3>Online Coaching</h3>
+                    <p>Train remotely with personalized programming and form check-ins. Perfect for those with flexible schedules or who prefer home training.</p>
                     <a href="https://form.jotform.com/262446754363059" class="btn btn-primary" style="margin: 1.5rem 1.5rem 0;">Get Started</a>
                 </div>
                 <div class="option-card">
-                    <img src="images/online-coaching.jpg" alt="Online Coaching">
-                    <h3>Online Coaching</h3>
-                    <p>Train remotely with personalized programming and form check-ins. Perfect for those with flexible schedules or who prefer home training.</p>
+                    <img src="images/in-person-training.jpg" alt="In-Person Training Sessions">
+                    <p class="option-tier">Tier 2 &amp; up</p>
+                    <h3>In-Person Sessions</h3>
+                    <p>One-on-one coaching in our facility. Get immediate feedback, correction, and hands-on guidance for maximum results and safety.</p>
                     <a href="https://form.jotform.com/262446601203043" class="btn btn-primary" style="margin: 1.5rem 1.5rem 0;">Get Started</a>
                 </div>
                 <div class="option-card">
@@ -1058,6 +1085,7 @@
             <h2>Choose Your Plan</h2>
             <div class="plans-grid">
                 <div class="plan-card">
+                    <p class="plan-tier">Tier 1 &middot; Online Coaching</p>
                     <h3>Starter</h3>
                     <div class="price">$99<span>/month</span></div>
                     <ul class="plan-features">
@@ -1071,6 +1099,7 @@
                 </div>
                 <div class="plan-card featured">
                     <div class="featured-badge">MOST POPULAR</div>
+                    <p class="plan-tier">Tier 2 &middot; In-Person</p>
                     <h3>Pro</h3>
                     <div class="price">$249<span>/month</span></div>
                     <ul class="plan-features">
@@ -1084,6 +1113,7 @@
                     <a href="https://form.jotform.com/262446601203043" class="btn btn-primary btn-large">Start Now</a>
                 </div>
                 <div class="plan-card">
+                    <p class="plan-tier">Tier 3 &middot; In-Person</p>
                     <h3>Elite</h3>
                     <div class="price">$499<span>/month</span></div>
                     <ul class="plan-features">
@@ -1150,7 +1180,7 @@
                 </div>
                 <div class="contact-card">
                     <h4>Email</h4>
-                    <p><a href="mailto:contact@functionallyfitness.com">contact@functionallyfitness.com</a></p>
+                    <p><a href="mailto:functionallyfitness@gmail.com">functionallyfitness@gmail.com</a></p>
                 </div>
             </div>
         </div>
