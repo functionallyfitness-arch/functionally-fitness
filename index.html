@@ -3,7 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Functionally Fitness - One-On-One Personal Training</title>
+    <title>Functionally Fitness | Personal Training in Clarksville, TN</title>
+    <meta name="description" content="Science-based personal training in Clarksville, TN and Fort Campbell. One-on-one coaching, corrective exercise, and nutrition guidance for beginners, busy adults, and performance clients. Book a free consultation.">
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="apple-touch-icon" href="images/logo.png">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Functionally Fitness">
+    <meta property="og:title" content="Functionally Fitness | Personal Training in Clarksville, TN">
+    <meta property="og:description" content="Science-based personal training in Clarksville, TN and Fort Campbell. One-on-one coaching, corrective exercise, and nutrition guidance. Book a free consultation.">
+    <meta property="og:url" content="https://functionallyfitness.com/">
+    <meta property="og:image" content="https://functionallyfitness.com/images/logo.png">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Functionally Fitness | Personal Training in Clarksville, TN">
+    <meta name="twitter:description" content="Science-based personal training in Clarksville, TN and Fort Campbell. One-on-one coaching, corrective exercise, and nutrition guidance. Book a free consultation.">
+    <meta name="twitter:image" content="https://functionallyfitness.com/images/logo.png">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ExerciseGym",
+        "name": "Functionally Fitness",
+        "url": "https://functionallyfitness.com/",
+        "logo": "https://functionallyfitness.com/images/logo.png",
+        "image": "https://functionallyfitness.com/images/logo.png",
+        "email": "functionallyfitness@gmail.com",
+        "telephone": "+1-719-963-2122",
+        "priceRange": "$99-$499 per month",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Clarksville",
+            "addressRegion": "TN",
+            "addressCountry": "US"
+        },
+        "areaServed": ["Clarksville, TN", "Fort Campbell"],
+        "sameAs": [
+            "https://www.facebook.com/FunctionallyFitnessTN",
+            "https://www.instagram.com/functionallyfitness"
+        ]
+    }
+    </script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cormorant+Garamond:wght@400;500;600;700&display=swap');
 
@@ -712,6 +749,32 @@
             }
         }
 
+        /* Lead Magnet Section */
+        .leadmagnet-section {
+            padding: 6rem 0;
+            background: var(--cream-bg);
+        }
+
+        .leadmagnet-content {
+            text-align: center;
+            max-width: 760px;
+            margin: 0 auto;
+        }
+
+        .leadmagnet-content h2 {
+            font-size: 2.8rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            letter-spacing: 1px;
+        }
+
+        .leadmagnet-content p {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            margin-bottom: 2.5rem;
+            line-height: 1.8;
+        }
+
         /* Portal Section */
         .portal-section {
             padding: 6rem 0;
@@ -975,6 +1038,113 @@
                 grid-template-columns: 1fr;
             }
         }
+        /* Mobile pass: menu button, tap targets, call bar */
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: 1px solid var(--accent-color);
+            border-radius: 2px;
+            color: var(--accent-color);
+            font-size: 1.4rem;
+            line-height: 1;
+            padding: 0.45rem 0.8rem;
+            cursor: pointer;
+        }
+
+        .mobile-cta-bar {
+            display: none;
+        }
+
+        .btn {
+            min-height: 48px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        a.btn {
+            display: inline-flex;
+        }
+
+        @media (max-width: 768px) {
+            .header .container {
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 0.5rem;
+            }
+
+            .nav-toggle {
+                display: block;
+                margin-left: auto;
+            }
+
+            .nav {
+                display: none;
+                width: 100%;
+            }
+
+            .nav.open {
+                display: block;
+            }
+
+            .nav ul {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0;
+                font-size: 1rem;
+            }
+
+            .nav ul li a {
+                display: block;
+                padding: 0.7rem 0.25rem;
+            }
+
+            .methodology-section,
+            .expertise-section,
+            .coach-section,
+            .options-section,
+            .plans-section,
+            .portal-section,
+            .contact-section,
+            .leadmagnet-section {
+                padding: 3.5rem 0;
+            }
+
+            .mobile-cta-bar {
+                display: flex;
+                position: fixed;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                z-index: 200;
+                background: var(--primary-color);
+                border-top: 3px solid var(--accent-color);
+            }
+
+            .mobile-cta-bar a {
+                flex: 1;
+                text-align: center;
+                padding: 0.95rem 0.5rem;
+                font-family: 'Cinzel', serif;
+                font-weight: 700;
+                font-size: 0.95rem;
+                letter-spacing: 1px;
+                text-decoration: none;
+            }
+
+            .mobile-cta-call {
+                color: var(--text-light);
+            }
+
+            .mobile-cta-book {
+                background: var(--accent-color);
+                color: var(--primary-color);
+            }
+
+            body {
+                padding-bottom: 57px;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -985,12 +1155,14 @@
                 <img src="images/logo.png" alt="Functionally Fitness Logo" class="logo">
                 <span class="business-name">Functionally Fitness</span>
             </div>
-            <nav class="nav">
+            <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+            <nav class="nav" id="mainNav">
                 <ul>
                     <li><a href="#why">Why Us</a></li>
                     <li><a href="#coach">Meet Tyler</a></li>
                     <li><a href="#options">Services</a></li>
                     <li><a href="#plans">Plans</a></li>
+                    <li><a href="#foundational-four">Free Guide</a></li>
                     <li><a href="https://ffclientportal.floot.app" class="btn btn-portal">Client Portal</a></li>
                     <li><a href="https://calendar.app.google/uceB14mhh3rDk57X7" class="cta-link">Book Now</a></li>
                 </ul>
@@ -1214,6 +1386,17 @@
         </div>
     </section>
 
+    <!-- Foundational Four Lead Magnet Section -->
+    <section class="leadmagnet-section" id="foundational-four">
+        <div class="container">
+            <div class="leadmagnet-content">
+                <h2>Not Ready to Start Yet?</h2>
+                <p>Start with The Foundational Four, my free 10-page guide to the four foundations every training plan I write is built on. It is the same starting point I use with new clients, free to download.</p>
+                <a href="https://form.jotform.com/262508000525042" class="btn btn-primary btn-large" target="_blank" rel="noopener">Get the Free Guide</a>
+            </div>
+        </div>
+    </section>
+
     <!-- Client Portal Section -->
     <section class="portal-section">
         <div class="container">
@@ -1280,5 +1463,30 @@
             </div>
         </div>
     </footer>
+
+    <!-- Mobile call bar: phones only -->
+    <div class="mobile-cta-bar">
+        <a href="tel:7199632122" class="mobile-cta-call">Call</a>
+        <a href="https://calendar.app.google/uceB14mhh3rDk57X7" class="mobile-cta-book">Book Free Consultation</a>
+    </div>
+
+    <script>
+        (function () {
+            var toggle = document.getElementById('navToggle');
+            var nav = document.getElementById('mainNav');
+            if (!toggle || !nav) return;
+            toggle.addEventListener('click', function () {
+                var open = nav.classList.toggle('open');
+                toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+                toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+            });
+            nav.addEventListener('click', function (e) {
+                if (e.target.tagName === 'A') {
+                    nav.classList.remove('open');
+                    toggle.setAttribute('aria-expanded', 'false');
+                }
+            });
+        })();
+    </script>
 </body>
 </html>
