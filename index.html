@@ -776,6 +776,39 @@
             line-height: 1.8;
         }
 
+        /* Push-Pull Classic Event Section */
+        .event-section {
+            padding: 6rem 0;
+            background: var(--primary-color);
+            color: var(--text-light);
+            border-top: 3px solid var(--accent-color);
+            border-bottom: 3px solid var(--accent-color);
+        }
+        .event-content { text-align: center; max-width: 800px; margin: 0 auto; }
+        .event-tag {
+            display: inline-block; font-family: 'Cinzel', serif; font-size: 0.85rem;
+            letter-spacing: 3px; color: var(--accent-color); margin-bottom: 1rem;
+        }
+        .event-content h2 { font-size: 2.8rem; color: var(--text-light); margin-bottom: 1.5rem; letter-spacing: 1px; }
+        .event-content p { font-size: 1.15rem; line-height: 1.8; margin-bottom: 2rem; opacity: 0.92; }
+        .event-details {
+            list-style: none; padding: 0; margin: 0 auto 2.5rem; display: grid;
+            grid-template-columns: repeat(4, 1fr); gap: 1rem; max-width: 900px;
+        }
+        .event-details li {
+            border: 1px solid var(--accent-color); padding: 1rem; font-size: 1rem;
+        }
+        .event-details strong {
+            display: block; font-family: 'Cinzel', serif; color: var(--accent-color);
+            font-size: 0.85rem; letter-spacing: 2px; margin-bottom: 0.35rem;
+        }
+        .event-note { font-size: 0.95rem !important; margin-top: 1.25rem; margin-bottom: 0 !important; opacity: 0.8; }
+        @media (max-width: 768px) {
+            .event-section { padding: 3.5rem 0; }
+            .event-content h2 { font-size: 2rem; }
+            .event-details { grid-template-columns: repeat(2, 1fr); }
+        }
+
         /* Portal Section */
         .portal-section {
             padding: 6rem 0;
@@ -1389,6 +1422,7 @@
                     <li><a href="#options">Services</a></li>
                     <li><a href="#plans">Plans</a></li>
                     <li><a href="#foundational-four">Free Guide</a></li>
+                    <li><a href="#push-pull-classic">Meet</a></li>
                     <li><a href="https://ffclientportal.floot.app" class="btn btn-portal">Client Portal</a></li>
                     <li><a href="https://calendar.app.google/uceB14mhh3rDk57X7" class="cta-link">Book Now</a></li>
                 </ul>
@@ -1640,6 +1674,25 @@
                 <h2>Not Ready to Start Yet?</h2>
                 <p>Start with The Foundational Four, my free 10-page guide to the four foundations every training plan I write is built on. It is the same starting point I use with new clients, free to download.</p>
                 <a href="https://form.jotform.com/262508000525042" class="btn btn-primary btn-large" target="_blank" rel="noopener">Get the Free Guide</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Push-Pull Classic Event Section -->
+    <section class="event-section" id="push-pull-classic">
+        <div class="container">
+            <div class="event-content">
+                <span class="event-tag">COMMUNITY EVENT &middot; EARLY 2027</span>
+                <h2>The Push-Pull Classic</h2>
+                <p>A beginner-friendly bench press and deadlift meet hosted by Functionally Fitness. Three attempts on each lift, real judging, and a crowd cheering you on. No federation membership needed, and first-timers are welcome.</p>
+                <ul class="event-details">
+                    <li><strong>LIFTS</strong>Bench Press + Deadlift</li>
+                    <li><strong>SPOTS</strong>15 lifters max</li>
+                    <li><strong>ENTRY</strong>$40 early / $50 regular</li>
+                    <li><strong>WHERE</strong>Clarksville, TN (venue TBA)</li>
+                </ul>
+                <a href="https://form.jotform.com/263265590443056" class="btn btn-primary btn-large" target="_blank" rel="noopener">Register Now</a>
+                <p class="event-note">Register and sign the waiver, then pay your entry on Square to lock in your spot. Spectators are free.</p>
             </div>
         </div>
     </section>
