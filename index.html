@@ -309,6 +309,68 @@
             font-size: 1.05rem;
         }
 
+        .hero-rating {
+            margin-top: 1.5rem;
+            font-size: 1.05rem;
+            font-weight: 600;
+        }
+
+        .hero-stars {
+            color: var(--accent-color);
+            letter-spacing: 0.15em;
+        }
+
+        .hero-credentials {
+            margin-top: 0.5rem;
+            font-size: 0.95rem;
+            opacity: 0.92;
+        }
+
+        .hero-alt {
+            margin-top: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .hero-alt a {
+            color: var(--text-light);
+            text-decoration: underline;
+            font-weight: 600;
+        }
+
+        .sticky-cta {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .sticky-cta {
+                display: block;
+                position: fixed;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                z-index: 999;
+                background: rgba(27, 67, 50, 0.97);
+                padding: 0.6rem 1rem calc(0.6rem + env(safe-area-inset-bottom));
+                box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.25);
+            }
+
+            .sticky-cta-btn {
+                display: block;
+                text-align: center;
+                background: var(--accent-color);
+                color: #fff;
+                font-weight: 700;
+                padding: 0.9rem 1rem;
+                border-radius: 6px;
+                text-decoration: none;
+                font-size: 1rem;
+            }
+
+            body {
+                padding-bottom: 72px;
+            }
+        }
+
         /* Methodology Section */
         .methodology-section {
             padding: 6rem 0;
@@ -1506,6 +1568,9 @@
                 <h1>Science-Based Personal Training in Clarksville, TN</h1>
                 <p>Evidence-driven programming tailored to your physiology and goals</p>
                 <a href="https://calendar.app.google/uceB14mhh3rDk57X7" class="btn btn-primary btn-large">Book Free Consultation</a>
+                <p class="hero-rating"><span class="hero-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span> Rated 5.0 on Google by Clarksville clients</p>
+                <p class="hero-credentials">Tyler Smith, Owner &amp; Head Trainer &middot; B.S. Exercise Science, Austin Peay &middot; NASM Certified Personal Trainer &middot; Corrective Exercise Specialist &middot; Certified Nutrition Specialist</p>
+                <p class="hero-alt">Not ready to book? <a href="#foundational-four">Get the free Foundational Four guide</a> and start there.</p>
             </div>
         </div>
     </section>
@@ -1913,5 +1978,8 @@
             if (!isNaN(closes) && Date.now() > closes) cohort.style.display = 'none';
         })();
     </script>
+    <div class="sticky-cta">
+        <a href="https://calendar.app.google/uceB14mhh3rDk57X7" class="sticky-cta-btn">Book a Free Consultation</a>
+    </div>
 </body>
 </html>
