@@ -337,39 +337,7 @@
             font-weight: 600;
         }
 
-        .sticky-cta {
-            display: none;
-        }
 
-        @media (max-width: 768px) {
-            .sticky-cta {
-                display: block;
-                position: fixed;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                z-index: 999;
-                background: rgba(27, 67, 50, 0.97);
-                padding: 0.6rem 1rem calc(0.6rem + env(safe-area-inset-bottom));
-                box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.25);
-            }
-
-            .sticky-cta-btn {
-                display: block;
-                text-align: center;
-                background: var(--accent-color);
-                color: #fff;
-                font-weight: 700;
-                padding: 0.9rem 1rem;
-                border-radius: 6px;
-                text-decoration: none;
-                font-size: 1rem;
-            }
-
-            body {
-                padding-bottom: 72px;
-            }
-        }
 
         /* Methodology Section */
         .methodology-section {
@@ -1717,8 +1685,5 @@
             if (!isNaN(closes) && Date.now() > closes) cohort.style.display = 'none';
         })();
     </script>
-    <div class="sticky-cta">
-        <a href="https://calendar.app.google/uceB14mhh3rDk57X7" class="sticky-cta-btn">Book a Free Consultation</a>
-    </div>
 </body>
 </html>
